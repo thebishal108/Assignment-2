@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login.Activity_Login_Screen">
+    <RelativeLayout
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="@color/medium_grey"
+            android:textSize="24dp"
+            android:id="@+id/tv_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login"
+            android:layout_marginBottom="50dp"></TextView>
+        <EditText
+            android:layout_marginBottom="24dp"
+            android:hint="@string/name"
+            android:layout_below="@id/tv_login"
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></EditText>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true"
+            android:layout_marginBottom="40dp"
+            android:layout_below="@id/et_name"
+            android:id="@+id/til_password">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/password"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.cardview.widget.CardView
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true"
+            app:cardElevation="5dp"
+            app:cardCornerRadius="5dp"
+            android:layout_below="@id/til_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:textColor="@color/textcolorwhite"
+                android:background="@color/splahscreencolor"
+                android:text="@string/btn_login"
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"></Button>
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+<LinearLayout
+    android:layout_marginBottom="16dp"
+    android:gravity="center"
+    android:layout_alignParentBottom="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+        <TextView
+            android:textColor="@color/normaltextcolor"
+            android:text="@string/have_an_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TextView>
+    <TextView
+        android:background="?android:attr/selectableItemBackground"
+        android:id="@+id/tv_register"
+        android:textStyle="bold"
+        android:textColor="@color/normaltextcolor"
+        android:clickable="true"
+        android:text="@string/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></TextView>
+</LinearLayout>
+
+
+</RelativeLayout>
