@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/FrameLayoutTheme"
+    tools:context=".HomeActivity">
+<RelativeLayout
+    style="@style/RelativeLayoutTheme"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/abl_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+<!--            <TextView-->
+<!--                style="@style/ToolbarTitleTheme"-->
+<!--                android:text="@string/home"-->
+<!--                android:id="@+id/tv_toolbar_title"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content">-->
+<!--            </TextView>-->
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <TextView
+        android:id="@+id/tv_empty_student_list_info"
+        style="@style/HomePageTextStyle"
+        android:text="@string/no_student_added"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </TextView>
+    <FrameLayout
+        android:id="@+id/fl_add_student"
+        style="@style/ButtonFrameTheme"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btn_add_student"
+            android:text="@string/add_student"
+            style="@style/ButtonTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </Button>
+    </FrameLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rl_student_list"
+        android:layout_above="@id/fl_add_student"
+        android:layout_below="@+id/abl_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </androidx.recyclerview.widget.RecyclerView>
+</RelativeLayout>
+</FrameLayout>
